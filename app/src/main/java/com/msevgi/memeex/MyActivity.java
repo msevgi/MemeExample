@@ -13,19 +13,26 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 
 import java.io.IOException;
 
 public class MyActivity extends Activity implements View.OnClickListener {
    private Button    mSelectButton;
+   private Button    mFinishButton;
+   private EditText  mEditText;
    private ImageView mImageView;
+   Bitmap            bm;
 
    @Override
    protected void onCreate(Bundle savedInstanceState) {
       super.onCreate(savedInstanceState);
       setContentView(R.layout.activity_my);
       mSelectButton = (Button) findViewById(R.id.selectButton);
+      mFinishButton = (Button) findViewById(R.id.finishButton);
+      mFinishButton.setOnClickListener(this);
+      mEditText = (EditText) findViewById(R.id.editText);
       mImageView = (ImageView) findViewById(R.id.imageView);
       mSelectButton.setOnClickListener(this);
    }
@@ -54,10 +61,22 @@ public class MyActivity extends Activity implements View.OnClickListener {
 
    @Override
    public void onClick(View v) {
-      Intent intent = new Intent();
-      intent.setType("image/*");
-      intent.setAction(Intent.ACTION_GET_CONTENT);
-      startActivityForResult(intent, 1);
+      switch (v.getId()) {
+         case R.id.selectButton :
+            Intent intent = new Intent();
+            intent.setType("image/*");
+            intent.setAction(Intent.ACTION_GET_CONTENT);
+            startActivityForResult(intent, 1);
+            break;
+         case R.id.finishButton :
+            mEditText.setCursorVisible(false);
+            mEditText.buildDrawingCache();
+            Bitmap bmp = Bitmap.createBitmap(mEditText.getDrawingCache());
+            combineImages(bm, bmp);
+            break;
+         default :
+            break;
+      }
 
    }
 
@@ -67,7 +86,7 @@ public class MyActivity extends Activity implements View.OnClickListener {
       if (resultCode == RESULT_OK) {
          if (requestCode == 1) {
             Uri selectedImageUri = data.getData();
-            Bitmap bm;
+
             try {
                bm = MediaStore.Images.Media.getBitmap(getApplicationContext().getContentResolver(), selectedImageUri);
             }
@@ -99,10 +118,10 @@ public class MyActivity extends Activity implements View.OnClickListener {
 
       cs = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
       Canvas comboImage = new Canvas(cs);
-      background = Bitmap.createScaledBitmap(background, width, height, true);
+      // background = Bitmap.createScaledBitmap(background, width, height, true);
       comboImage.drawBitmap(background, 0, 0, null);
-      // comboImage.drawBitmap(foreground, matrix, null);
-
+      comboImage.drawBitmap(foreground, background.getWidth(), 0f, null);
+      mImageView.setImageBitmap(cs);
       return cs;
    }
 }
