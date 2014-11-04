@@ -119,8 +119,8 @@ public class MyActivity extends Activity implements View.OnClickListener {
       cs = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
       Canvas comboImage = new Canvas(cs);
       // background = Bitmap.createScaledBitmap(background, width, height, true);
-      comboImage.drawBitmap(background, 0, 0, null);
-      comboImage.drawBitmap(foreground, background.getWidth(), 0f, null);
+      comboImage.drawBitmap(background, 0f, 0f, null);
+      comboImage.drawBitmap(foreground, 0f, background.getHeight()-100f, null);
       mImageView.setImageBitmap(cs);
       return cs;
    }

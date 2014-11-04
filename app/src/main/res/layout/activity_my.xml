@@ -16,9 +16,9 @@
     <EditText
         android:id="@+id/editText"
         android:layout_width="match_parent"
-        android:background="#000000"
-        android:textColor="#ff0000"
-        android:layout_height="wrap_content"/>
+        android:background="#ff0000"
+        android:textColor="#ffffff"
+        android:layout_height="50dp"/>
 
     <Button
         android:id="@+id/finishButton"
