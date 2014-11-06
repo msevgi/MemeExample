@@ -1,0 +1,52 @@
+<resources>
+
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">Meme Creation Settings</string>
+    <string name="pref_header_image">Image Generation Settings</string>
+    <string name="pref_header_video">Gif Generation Settings</string>
+    <string name="pref_title_image_resolution">Choose Meme Picture Resolution</string>
+    <string name="pref_description_image_resolution">The resolution of the final meme image</string>
+    <string name="pref_title_gif_resolution">Choose a Gif Resolution</string>
+    <string name="pref_description_gif_resolution">The resolution of the resulting gif</string>
+    <string name="pref_title_frames_per_second">Capture FPS</string>
+    <string name="pref_description_frames_per_second">The frames per second to capture from a given video</string>
+
+    <string-array name="pref_resolutions_titles">
+        <item>Large ( 1280x720 )</item>
+        <item>Medium ( 854x480 )</item>
+        <item>Medium ( 640x480 )</item>
+        <item>Small ( 320x240 )</item>
+        <item>X-Small ( 160x160 )</item>
+    </string-array>
+    <string-array name="pref_resolutions">
+        <item>1280x720</item>
+        <item>854x480</item>
+        <item>640x480</item>
+        <item>320x240</item>
+        <item>160x160</item>
+    </string-array>
+    <string-array name="pref_frames_per_second_titles">
+        <item>Video Default</item>
+        <item>5 Frames Per Second</item>
+        <item>9 Frames Per Second</item>
+        <item>12 Frames Per Second</item>
+        <item>15 Frames Per Second</item>
+        <item>19 Frames Per Second</item>
+        <item>24 Frames Per Second</item>
+    </string-array>
+    <integer-array name="pref_frames_per_second">
+        <item>1000</item>
+        <item>5</item>
+        <item>9</item>
+        <item>12</item>
+        <item>15</item>
+        <item>19</item>
+        <item>24</item>
+    </integer-array>
+
+</resources>

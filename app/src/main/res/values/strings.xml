@@ -1,10 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">MemeEx</string>
+    <string name="app_name">Maximum Ultimate Meme Creator X Turbo</string>
+    <string name="menu_settings">Settings</string>
+    <string name="descript_gallery_choose_clip">Gallery View Selected Frames</string>
+    <string name="title_activity_edit_meme_image">Edit Meme Image</string>
+    <string name="title_activity_choose_ten_second_clip">Choose Video Clip For Gif</string>
+    <string name="choose_video_meme_content">Choose Video Meme Content</string>
+    <string name="choose_photo_meme_content">Choose Photo Meme Content</string>
+    <string name="choose_template_meme_content">Choose Template Meme Content</string>
+    <string name="take_meme_photo">Take Meme Photo</string>
+    <string name="take_meme_video">Take Meme Video</string>
+    <string name="title_section3">Section 3</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section1">Section 1</string>
     <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
-    <string name="select_photo">Select Photo</string>
-    <string name="finish">Finish</string>
-
+    <string name="title_activity_video_frame_edit">Choose Frames For Gif</string>
+    <string name="apply_text">Apply Changes</string>
+    <string name="publish_meme">Share</string>
+    <string name="edit_text_hint_title">Title</string>
+    <string name="edit_text_hint_content">Content</string>
+    <string name="meme_in_progress">Meme In Progress</string>
+    <string name="publish_video">Share Gif</string>
+    <string name="preview">Preview</string>
+    <string name="help">Help</string>
+    <string name="choose_clip_progress_dialog_description">Grabbing Frames&#8230;</string>
+    <string name="publish_video_gif_progress_dialog_description">Creating Gif&#8230;</string>
+    <string name="process_text_progress_dialog_description">Applying Text&#8230;</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="title_activity_preview">Preview</string>
+    <string name="delete_frame">Delete Frame</string>
+    <string name="delete_frames">Delete Frames</string>
+    <string name="select_all_frames">Select All Frames</string>
+    <string name="unselect_all_frames">Unselect All Frames</string>
+    <string name="delete_frames_detail">Delete Frames, %s selected for delete</string>
+    <string name="dialog_error_title">Error</string>
+    <string name="dialog_cant_delete_only_frame">You can\'t delete the only frame</string>
+    <string name="dialog_cant_delete_first_frame">You can\'t delete the first frame</string>
+    <string name="save_video">Save Video</string>
+    <string name="cant_open_video">Sorry,  we couldn\'t open this file</string>
+    <string name="cant_save_image">Sorry, we couldn\'t save this file</string>
+    <string name="title_activity_meme_template_gallery">Meme Template Gallery</string>
+    <string name="apply">Apply Text to Frames</string>
+    <string name="title_activity_choose_section_of_clip">Choose Segment</string>
+    <string name="find_meme_template">Search Meme Templates</string>
+    <string name="meme_search_hint">Search Meme Templates</string>
+    <string name="invalid_drop_content">The Ultimate Meme Creator can\'t handle that kind of content</string>
 </resources>

@@ -1,0 +1,7 @@
+<resources>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="button_text">#FFFFFFFF</color>
+    <color name="selected_image">#77339933</color>
+    <color name="trans">#00000000</color>
+</resources>

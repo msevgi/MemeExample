@@ -9,21 +9,26 @@ import android.graphics.Canvas;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.io.IOException;
 
-public class MyActivity extends Activity implements View.OnClickListener {
+public class MyActivity extends Activity implements View.OnClickListener, TextWatcher {
    private Button    mSelectButton;
    private Button    mFinishButton;
    private EditText  mEditText;
    private ImageView mImageView;
    Bitmap            bm;
+   private TextView  mTextView;
 
    @Override
    protected void onCreate(Bundle savedInstanceState) {
@@ -31,8 +36,10 @@ public class MyActivity extends Activity implements View.OnClickListener {
       setContentView(R.layout.activity_my);
       mSelectButton = (Button) findViewById(R.id.selectButton);
       mFinishButton = (Button) findViewById(R.id.finishButton);
+      mTextView = (TextView) findViewById(R.id.myImageViewText);
       mFinishButton.setOnClickListener(this);
       mEditText = (EditText) findViewById(R.id.editText);
+      mEditText.addTextChangedListener(this);
       mImageView = (ImageView) findViewById(R.id.imageView);
       mSelectButton.setOnClickListener(this);
    }
@@ -113,15 +120,41 @@ public class MyActivity extends Activity implements View.OnClickListener {
       int width = 0, height = 0;
       Bitmap cs;
 
-      width = getWindowManager().getDefaultDisplay().getWidth();
-      height = getWindowManager().getDefaultDisplay().getHeight();
-
+      if (background.getWidth() > foreground.getWidth()) {
+         width = background.getWidth();
+         height = background.getHeight();
+      }
+      else {
+         width = foreground.getWidth();
+         height = background.getHeight();
+      }
+      ViewGroup.LayoutParams params = mImageView.getLayoutParams();
+      params.width = (int) getResources().getDimension(R.dimen.imageview_width);
       cs = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
       Canvas comboImage = new Canvas(cs);
       // background = Bitmap.createScaledBitmap(background, width, height, true);
       comboImage.drawBitmap(background, 0f, 0f, null);
-      comboImage.drawBitmap(foreground, 0f, background.getHeight()-100f, null);
+      comboImage.drawBitmap(foreground, 0f, background.getHeight() - 100f, null);
       mImageView.setImageBitmap(cs);
       return cs;
+   }
+
+   @Override
+   public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+   }
+
+   @Override
+   public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+      mTextView.setText(mEditText.getText().toString());
+      mTextView.buildDrawingCache();
+      Bitmap bmp = Bitmap.createBitmap(mTextView.getDrawingCache());
+      combineImages(bm, bmp);
+   }
+
+   @Override
+   public void afterTextChanged(Editable s) {
+
    }
 }

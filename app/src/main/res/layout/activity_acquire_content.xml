@@ -1,0 +1,146 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AcquireContent"
+    tools:ignore="MergeRootFrame"
+    android:background="@drawable/grey_noise"
+    android:id="@+id/activityAcquireContentRootView"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:id="@+id/buttonLayout0"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.20">
+
+    <ImageView
+        android:id="@+id/galleryPhotoImageView0"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:layout_weight="0.80"
+        android:layout_marginBottom="4.3dp"
+        android:layout_marginTop="4.3dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/one_does_not_simply" />
+
+    <Button
+        android:id="@+id/getGalleryContentButton"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:onClick="acquireTemplateGalleryContent"
+        android:text="@string/choose_template_meme_content"
+        android:textColor="@color/button_text"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:layout_weight="0.20" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/buttonLayout1"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.20">
+
+    <ImageView
+        android:id="@+id/galleryPhotoImageView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:layout_weight="0.80"
+        android:layout_marginBottom="4.3dp"
+        android:layout_marginTop="4.3dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/slenderman" />
+
+    <Button
+        android:id="@+id/getGalleryContentButton2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:onClick="acquirePhotoGalleryMemeContent"
+        android:text="@string/choose_photo_meme_content"
+        android:textColor="@color/button_text"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:layout_weight="0.20" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/buttonLayout2"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.20">
+    <ImageView
+        android:id="@+id/galleryPhotoImageView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.80"
+        android:layout_marginBottom="4.3dp"
+        android:layout_marginTop="4.3dp"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/gangnam" />
+    <Button
+        android:id="@+id/getGalleryVideoContentButton"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:onClick="acquireVideoGalleryMemeContent"
+        android:text="@string/choose_video_meme_content"
+        android:textColor="@color/button_text"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:layout_weight="0.20" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/buttonLayout3"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.20">
+
+    <ImageView
+        android:id="@+id/galleryPhotoImageView3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.80"
+        android:scaleType="centerCrop"
+        android:layout_marginBottom="4.3dp"
+        android:layout_marginTop="4.3dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/why" />
+
+    <Button
+        android:id="@+id/getPhotoCameraContentButton"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:onClick="acquirePhotoCameraMemeContent"
+        android:text="@string/take_meme_photo"
+        android:textColor="@color/button_text"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:layout_weight="0.20" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/buttonLayout4"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.20">
+    <ImageView
+        android:id="@+id/galleryPhotoImageView4"
+         android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.80"
+        android:scaleType="centerCrop"
+        android:layout_marginBottom="4.3dp"
+        android:layout_marginTop="4.3dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/tyson" />
+    <Button
+        android:id="@+id/getVideoCameraContentButton"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:onClick="acquireVideoCameraMemeContent"
+        android:text="@string/take_meme_video"
+        android:textColor="@color/button_text"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:layout_weight="0.20" />
+</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/delete_selected_frames"
+        android:orderInCategory="10"
+        android:title="@string/delete_frames" />
+        <item
+        android:id="@+id/select_all"
+        android:orderInCategory="10"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/select_all_frames" />
+        <item
+        android:id="@+id/menu_settings"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/menu_settings"/>
+</menu>
